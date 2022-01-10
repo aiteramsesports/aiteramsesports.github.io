@@ -35,9 +35,10 @@ header {
   width:100%;
   top:0;
   z-index: 10000;
+  justify-content: center;
 }
 
-header nav a {
+header a {
   display: block;
   font-size: 1.5em;
   padding: 5px 10px 5px 10px;
@@ -47,9 +48,21 @@ header nav a {
   text-align: center;
 }
 
+.top-nav {
+  display: none;
+}
+
 .social-nav {
   justify-content: center;
   display: flex;
+}
+
+.mobile-nav a {
+  display: inline-block;
+}
+
+.hamburger {
+  float: right;
 }
     
 .big-hero {
@@ -90,7 +103,6 @@ section {
 
 section:hover {
   transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-
 }
 
 .gallery {
@@ -182,23 +194,27 @@ a:hover {
 }
 
 @media screen and (min-width: 768px) {
-  header nav a {
+  header nav a, .social-nav a {
     font-size: 1.5em;
+    display: inline-block;
+  }
+
+  .social-nav {
+    float: right;
+  }
+
+  .mobile-nav {
+    display: none;
   }
   
   footer nav a {
     font-size: 1.5em;
   }
-  
-  .dropdown {
-    display: inline-block;
-  }
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+
   .gallery {
     grid-template-columns: 1fr 1fr;
   }
+
 }
   
 @media screen and (min-width: 990px) {
@@ -217,20 +233,11 @@ a:hover {
     display: inline-block;
   }
 
-  nav a, .social-nav {
-    display: inline;
-  }
-  .social-nav {
-    float: right;
-  }
-
   .content-wrapper {
     display: flex;
   }
  
   section {
-    
-    /* border: 2px solid var(--primary); */
     margin: 20px;
     padding: 20px;
   }

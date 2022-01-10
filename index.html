@@ -9,12 +9,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="home">
+
+  <script>
+    function hamburger() {
+      var x = document.getElementById("top-nav");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
+
   <div class="wrapper">
     <header>
-      <nav>
+      <nav class='mobile-nav'>
+        <a>Rams Esports</a>
+        <a href="javascript:void(0);" class="hamburger" onclick="hamburger()"><i class="fa fa-bars"></i></a>
+      </nav>
+      <nav id="top-nav">
         <a href="/">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
