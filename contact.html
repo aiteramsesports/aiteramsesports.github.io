@@ -12,10 +12,26 @@
 </head>
 
 <body class="home">
+
+  <script>
+    function hamburger() {
+      var x = document.getElementById("top-nav");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
+
   <div class="wrapper">
     <header>
-      <nav>
-        <a href="index.html">Home</a>
+      <nav class='mobile-nav'>
+        <a>Rams Esports</a>
+        <a href="javascript:void(0);" class="hamburger" onclick="hamburger()"><i class="fa fa-bars"></i></a>
+      </nav>
+      <nav id="top-nav">
+        <a href="/">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="https://esportsgear.com/collections/aite-rams?page=1">Store</a>
@@ -25,6 +41,7 @@
           </nav>
       </nav>
     </header>
+    
     <div class="big-hero">
 
     </div>
