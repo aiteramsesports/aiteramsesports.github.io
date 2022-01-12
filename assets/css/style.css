@@ -65,15 +65,32 @@ header a {
   float: right;
 }
     
-.big-hero {
-  background-image: url("../images/bighero.png");
-  background-size: cover;
-  background-position:50% 50%;
-  background-repeat: no-repeat;
-  height: 50vh;
-  display:flex;
-  align-items: center;
-  justify-content: center;
+.big-hero-container {
+  width:100%;
+  position: relative;
+  margin: auto;
+}
+
+.slides {
+  width: 100%;
+  display: none;
+} 
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
 a {

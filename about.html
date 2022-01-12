@@ -13,17 +13,6 @@
 
 <body class='home'>
 
-  <script>
-    function hamburger() {
-      var x = document.getElementById("top-nav");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
-      }
-    }
-  </script>
-
   <div class="wrapper">
     <header>
       <nav class='mobile-nav'>
@@ -34,17 +23,32 @@
         <a href="/">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <a href="https://esportsgear.com/collections/aite-rams?page=1">Store</a>
+        <a href="https://esportsgear.com/collections/aite-rams?page=1" target='_blank'>Store</a>
           <nav class="social-nav">
             <a class="twitter" href="https://twitter.com/AITERamsEsports"><i class="fa fa-twitter" aria-hidden="true"></i></a>
             <a class="instagram" href="https://instagram.com/AITE_Rams_Esports"><i class="fa fa-instagram" aria-hidden="true"></i></a>
           </nav>
       </nav>
     </header>
-    
-    <div class="big-hero">
 
+    <div class="big-hero-container">
+      <div class="slides fade">
+        <img src="assets/images/bighero.png">
+      </div>
+
+      <div class="slides fade">
+        <img src="assets/images/rocketleague.jpg">
+      </div>
+
+      <div class="slides fade">
+        <img src="assets/images/smash.jpg">
+      </div>
+
+      <div class="slides fade">
+        <img src="assets/images/minecraft.png">
+      </div>
     </div>
+
     <main>
       <h1>About Us</h1>
       <section>
@@ -97,6 +101,33 @@
       </nav>
     </footer>
   </div>
+
+  <script>
+    function hamburger() {
+      var x = document.getElementById("top-nav");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("slides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 6000); // Change image every 2 seconds
+    } 
+  </script>
+
 </body>
 
 </html>
