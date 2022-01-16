@@ -242,6 +242,7 @@ header a:hover {
     margin: 20px;
     padding: 20px;
     display: flex;
+    background-color: white;
   }
   
   .section-image {
